@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {
-                git url: "", branch: "main"
+                git url: "https://github.com/IradIcaTE/Python-Report.git", branch: "main"
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
 
         stage ("Archive Report") {
             steps {
-                archiveArtifacts artifacts: 'report.txt', onlyifsucessful: true
+                archiveArtifacts artifacts: 'report.txt', onlyIfSuccessful: true
             }
         }
     }
